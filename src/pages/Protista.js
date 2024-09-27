@@ -28,12 +28,6 @@ const Protista = () => {
       <View style={styles.headerContainer}>
         <Text style={styles.header}>{kingdom}</Text>
       </View>
-      <Text style={styles.info}>
-        O reino Protista é composto por organismos eucariontes que não se
-        encaixam nas categorias de plantas, animais ou fungos. Este reino é
-        muito diverso e inclui algas, protozoários e formas de vida
-        unicelulares.
-      </Text>
       <View style={styles.reino}>
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -43,11 +37,11 @@ const Protista = () => {
           ListEmptyComponent={
             <Text style={styles.empty}>Nenhum dado encontrado.</Text>
           }
-          style={{ width: '100%', paddingBottom: 20, height: '80%' }}
+          style={{ width: '100%', height: '95%' }}
           contentContainerStyle={{
             justifyContent: 'center',
             gap: 20,
-            paddingVertical: 20,
+            paddingBottom: 15,
           }}
         />
       </View>
@@ -66,7 +60,6 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
     padding: 15,
     backgroundColor: '#00796b',
     shadowColor: '#000',
@@ -76,15 +69,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
     letterSpacing: 1,
-  },
-  info: {
-    fontSize: 14,
-    width: '100%',
-    color: '#004d40',
-    textAlign: 'center',
-    paddingHorizontal: 20,
-    marginTop: 5,
-    fontWeight: '600',
   },
   reino: {
     width: '100%',
