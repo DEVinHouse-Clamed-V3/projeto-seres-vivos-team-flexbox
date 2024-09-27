@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Text, SafeAreaView, StyleSheet, View, FlatList, Image } from 'react-native';
+import {
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  View,
+  FlatList,
+  Image,
+} from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import axios from 'axios';
 
@@ -28,7 +35,10 @@ const Protista = () => {
         <Text style={styles.header}>{kingdom}</Text>
       </View>
       <Text style={styles.info}>
-        O reino Protista é composto por organismos eucariontes que não se encaixam nas categorias de plantas, animais ou fungos. Este reino é muito diverso e inclui algas, protozoários e formas de vida unicelulares.
+        O reino Protista é composto por organismos eucariontes que não se
+        encaixam nas categorias de plantas, animais ou fungos. Este reino é
+        muito diverso e inclui algas, protozoários e formas de vida
+        unicelulares.
       </Text>
       <View style={styles.reino}>
         <FlatList
@@ -44,6 +54,10 @@ const Protista = () => {
           ListEmptyComponent={
             <Text style={styles.empty}>Nenhum dado encontrado.</Text>
           }
+          style={{ width: '100%', paddingBottom: 20, height: '80%' }}
+          contentContainerStyle={{
+            justifyContent: 'center',
+          }}
         />
       </View>
     </SafeAreaView>
