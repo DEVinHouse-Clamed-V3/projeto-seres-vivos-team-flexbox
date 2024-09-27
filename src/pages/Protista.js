@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import axios from 'axios';
+import OrganismoProtista from '../components/OrganismoProtista';
 
 const Protista = () => {
   const route = useRoute();
@@ -44,13 +45,7 @@ const Protista = () => {
         <FlatList
           data={reino}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => (
-            <View style={styles.item}>
-              <Image source={{ uri: item.image }} style={styles.image} />
-              <Text style={styles.itemTitle}>{item.name}</Text>
-              <Text style={styles.itemDescription}>{item.description}</Text>
-            </View>
-          )}
+          renderItem={({ item }) => <OrganismoProtista item={item} />}
           ListEmptyComponent={
             <Text style={styles.empty}>Nenhum dado encontrado.</Text>
           }
@@ -102,34 +97,6 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingHorizontal: 20,
     marginTop: 20,
-  },
-  item: {
-    marginBottom: 20,
-    padding: 10,
-    backgroundColor: '#ffffff',
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    alignItems: 'center',
-  },
-  itemTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#004d40',
-  },
-  itemDescription: {
-    fontSize: 14,
-    color: '#444444',
-    textAlign: 'center',
-    marginTop: 5,
-  },
-  image: {
-    width: 150,
-    height: 150,
-    borderRadius: 10,
-    marginBottom: 10,
   },
   empty: {
     textAlign: 'center',
