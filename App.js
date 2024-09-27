@@ -25,7 +25,6 @@ export default function App() {
         <Stack.Screen
           name="Protista"
           component={Protista}
-          options={{ headerTitle: '' }}
         />
         <Stack.Screen name="Monera" component={Monera} />
       </Stack.Navigator>

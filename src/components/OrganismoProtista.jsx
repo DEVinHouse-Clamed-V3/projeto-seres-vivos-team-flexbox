@@ -7,34 +7,36 @@ export default function OrganismoProtista({ item }) {
       <Image source={{ uri: item.image }} style={styles.image} />
       <Text style={styles.title}>{item.name}</Text>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Descrição</Text>
-        <Text style={styles.text}>{item.description}</Text>
-      </View>
+      <View style={styles.contentSection}>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Descrição:</Text>
+          <Text style={styles.text}>{item.description}</Text>
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Nutrição</Text>
-        <Text style={styles.text}>{item.nutrition}</Text>
-      </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Nutrição:</Text>
+          <Text style={styles.text}>{item.nutrition}</Text>
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Tipo Celular</Text>
-        <Text style={styles.text}>{item.cellType}</Text>
-      </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Tipo Celular:</Text>
+          <Text style={styles.text}>{item.cellType}</Text>
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Organização Celular</Text>
-        <Text style={styles.text}>{item.cellOrganization}</Text>
-      </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Organização:</Text>
+          <Text style={styles.text}>{item.cellOrganization}</Text>
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Reprodução</Text>
-        <Text style={styles.text}>{item.reproduction}</Text>
-      </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Reprodução:</Text>
+          <Text style={styles.text}>{item.reproduction}</Text>
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Respiração</Text>
-        <Text style={styles.text}>{item.respiration}</Text>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Respiração:</Text>
+          <Text style={styles.text}>{item.respiration}</Text>
+        </View>
       </View>
     </View>
   );
@@ -42,7 +44,7 @@ export default function OrganismoProtista({ item }) {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 15,
+    padding: 10,
     backgroundColor: '#ffffff',
     borderRadius: 12,
     alignItems: 'center',
@@ -67,20 +69,26 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: 'center',
   },
-  section: {
-    marginBottom: 15,
+  contentSection: {
+    gap: 5,
+    flexDirection: 'column',
     width: '100%',
-    alignItems: 'center',
+    alignItems: 'flex-start',
+  },
+  section: {
+    flexDirection: 'column', // Alterado para coluna
+    width: '100%',
+    alignItems: 'flex-start', // Alinhado à esquerda para o texto
   },
   sectionTitle: {
-    fontSize: 16,
+    textAlign: 'left', // Alterado para alinhar à esquerda
+    fontSize: 14,
     fontWeight: '600',
     color: '#00695c',
-    marginBottom: 5,
   },
   text: {
-    fontSize: 14,
+    textAlign: 'left', // Alterado para alinhar à esquerda
+    fontSize: 12,
     color: '#444444',
-    textAlign: 'center',
   },
 });

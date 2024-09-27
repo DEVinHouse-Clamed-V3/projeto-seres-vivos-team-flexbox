@@ -25,9 +25,6 @@ const Protista = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.header}>{kingdom}</Text>
-      </View>
       <View style={styles.reino}>
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -37,7 +34,7 @@ const Protista = () => {
           ListEmptyComponent={
             <Text style={styles.empty}>Nenhum dado encontrado.</Text>
           }
-          style={{ width: '100%', height: '95%' }}
+          style={{ width: '100%' }}
           contentContainerStyle={{
             justifyContent: 'center',
             gap: 20,
