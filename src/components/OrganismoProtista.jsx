@@ -2,7 +2,6 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 
 export default function OrganismoProtista({ item }) {
-  console.log(item.nutrition);
   return (
     <View style={styles.container}>
       <Image source={{ uri: item.image }} style={styles.image} />
