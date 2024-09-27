@@ -13,7 +13,6 @@ export default function OrganismoProtista({ item }) {
 
 const styles = StyleSheet.create({
   item: {
-    marginBottom: 20,
     padding: 10,
     backgroundColor: '#ffffff',
     borderRadius: 10,

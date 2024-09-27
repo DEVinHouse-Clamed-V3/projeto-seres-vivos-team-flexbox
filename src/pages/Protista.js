@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  View,
-  FlatList,
-  Image,
-} from 'react-native';
+import { Text, SafeAreaView, StyleSheet, View, FlatList } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import axios from 'axios';
 import OrganismoProtista from '../components/OrganismoProtista';
@@ -43,6 +36,7 @@ const Protista = () => {
       </Text>
       <View style={styles.reino}>
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={reino}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => <OrganismoProtista item={item} />}
@@ -52,6 +46,8 @@ const Protista = () => {
           style={{ width: '100%', paddingBottom: 20, height: '80%' }}
           contentContainerStyle={{
             justifyContent: 'center',
+            gap: 20,
+            paddingBottom: 20,
           }}
         />
       </View>
@@ -62,46 +58,43 @@ const Protista = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b2ebf2',
-    paddingVertical: 20,
+    backgroundColor: '#e0f7fa',
     alignItems: 'center',
+    paddingBottom: 30,
   },
   headerContainer: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginBottom: 20,
     padding: 15,
-    backgroundColor: '#004d40',
-    borderRadius: 10,
+    backgroundColor: '#00796b',
     shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
   },
   header: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#ffffff',
+    letterSpacing: 1,
   },
   info: {
-    fontSize: 13,
+    fontSize: 14,
     width: '100%',
-    color: '#444444',
+    color: '#004d40',
     textAlign: 'center',
     paddingHorizontal: 20,
     marginTop: 5,
-    fontWeight: 'bold',
+    fontWeight: '600',
   },
   reino: {
     width: '100%',
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     marginTop: 20,
   },
   empty: {
     textAlign: 'center',
     fontSize: 16,
-    color: '#444444',
+    color: '#00796b',
     marginTop: 20,
   },
 });
