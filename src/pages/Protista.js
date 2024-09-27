@@ -47,7 +47,7 @@ const Protista = () => {
           contentContainerStyle={{
             justifyContent: 'center',
             gap: 20,
-            paddingBottom: 20,
+            paddingVertical: 20,
           }}
         />
       </View>
