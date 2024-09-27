@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Text, SafeAreaView, StyleSheet, View, FlatList } from 'react-native';
-import { useRoute } from '@react-navigation/native';
 import axios from 'axios';
 import OrganismoProtista from '../components/OrganismoProtista';
 
 const Protista = () => {
-  const route = useRoute();
-  const { kingdom } = route.params;
   const ip = 'http://192.168.15.4:3000';
   const [reino, setReino] = useState([]);
 
