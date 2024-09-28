@@ -8,7 +8,7 @@ const Plantas = () => {
   const [plantas, setPlantas] = useState([]);
   const [search, setSearch] = useState('');
 
-  // const filtroPlantas = plantas.filter(biscoito => biscoito.mensagem.toUpperCase().includes(search.toUpperCase()))
+  const filtroPlantas = plantas.filter(item => item.name.toUpperCase().includes(search.toUpperCase()))
 
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Plantas = () => {
       />
 
       <FlatList
-        data={plantas}
+        data={filtroPlantas}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <PlantCard item={item} />}
 

@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     height: 150,
     margin: 10,
     alignSelf: 'center',
-    borderRadius: 20
+    borderRadius: 20,
+    resizeMode: 'cover',
   },
 
   cardRow: {
