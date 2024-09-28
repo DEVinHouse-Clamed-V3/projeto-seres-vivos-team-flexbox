@@ -3,4 +3,5 @@
 
 
 Preview da tela de plantas:
-![img](https://github.com/user-attachments/assets/92b8f0f3-e98d-403f-94d6-17f8f6bf3a69)
+
+<img src="https://github.com/user-attachments/assets/92b8f0f3-e98d-403f-94d6-17f8f6bf3a69" width="100" height="100">
