@@ -8,7 +8,7 @@ const Plantas = () => {
   const [plantas, setPlantas] = useState([]);
   const [search, setSearch] = useState('');
 
-  const filtroPlantas = plantas.filter(item => item.name.toUpperCase().includes(search.toUpperCase()))
+  const filtroPlantas = plantas.filter(item => item.name.toUpperCase().includes(search.toUpperCase()))  
 
 
   useEffect(() => {
