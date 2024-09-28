@@ -13,7 +13,7 @@ export default function PlantCard({ item }) {
 
       <View style={styles.cardRow}>
         <Text style={styles.title}>Descrição:</Text>
-        <Text style={styles.description} >{item.description}</Text>
+        <Text >{item.description}</Text>
       </View>
 
       <View style={styles.cardRow}>
@@ -60,9 +60,8 @@ const styles = StyleSheet.create({
   },
 
   cardRow: {
-    flexDirection: 'row',
-    margin: 8,
-    gap: 5,
+    marginVertical: 5,
+    paddingLeft: 5,
   },
 
   cardContainer: {
@@ -87,16 +86,13 @@ const styles = StyleSheet.create({
     color: '#2b5a42',
   },
 
-  description: {
-    maxWidth: 250,
-  },
-
   plantTitle: {
     fontWeight: 'bold',
     marginHorizontal: 'auto',
     fontSize: 18,
     color: '#2b5a42',
-  }
+  },
+
 
 
 })
