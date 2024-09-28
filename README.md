@@ -3,4 +3,4 @@
 
 
 Preview da tela de plantas:
-<img src="[https://github.com/favicon.ico](https://github.com/user-attachments/assets/92b8f0f3-e98d-403f-94d6-17f8f6bf3a69)"  alt="img">
+<img src="(https://github.com/user-attachments/assets/92b8f0f3-e98d-403f-94d6-17f8f6bf3a69)" width="300" alt="img">
