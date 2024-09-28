@@ -8,7 +8,6 @@ export default function PlantCard({ item }) {
       <Image source={{ uri: item.image }} style={styles.img} />
 
       <View style={styles.cardRow}>
-        <Text style={styles.title}>Nome:</Text>
         <Text style={styles.plantTitle}>{item.name}</Text>
       </View>
 
@@ -54,15 +53,15 @@ const styles = StyleSheet.create({
   img: {
     width: 150,
     height: 150,
-    margin: 10,
+    margin: 8,
     alignSelf: 'center',
-    borderRadius: 20,
+    borderRadius: 16,
     resizeMode: 'cover',
   },
 
   cardRow: {
     flexDirection: 'row',
-    margin: 10,
+    margin: 8,
     gap: 5,
   },
 
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#ffffff',
     padding: 10,
-    borderRadius: 10,
+    borderRadius: 20,
     marginBottom: 10,
     shadowColor: "#000",
     shadowOffset: {
@@ -94,6 +93,9 @@ const styles = StyleSheet.create({
 
   plantTitle: {
     fontWeight: 'bold',
+    marginHorizontal: 'auto',
+    fontSize: 18,
+    color: '#2b5a42',
   }
 
 
