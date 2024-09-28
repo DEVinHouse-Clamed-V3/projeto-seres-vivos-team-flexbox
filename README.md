@@ -3,4 +3,4 @@
 
 
 Preview da tela de plantas:
-![](https://github.com/user-attachments/assets/92b8f0f3-e98d-403f-94d6-17f8f6bf3a69)
+![Preview da tela de plantas](https://github.com/user-attachments/assets/92b8f0f3-e98d-403f-94d6-17f8f6bf3a69)
